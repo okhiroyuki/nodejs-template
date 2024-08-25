@@ -1,0 +1,24 @@
+---
+name: Node.js
+
+# yamllint disable-line rule:truthy
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
+      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
+        with:
+          repository: okhiroyuki/composite-actions
+          path: ./.github/actions/composite-actions
+      - uses: ./.github/actions/composite-actions/setup-node
+      - name: npm install, build, and test
+        run: npm run test --if-present
+        env:
+          CI: true
