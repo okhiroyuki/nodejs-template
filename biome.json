@@ -1,0 +1,29 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
+	"organizeImports": {
+		"enabled": true
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"suspicious": {
+				"noExplicitAny": "off"
+			},
+			"recommended": true
+		}
+	},
+	"files": {
+		"ignore": [
+			".devcontainer/*",
+			".vscode/*",
+			"examples/*.json",
+			"dist/*",
+			"coverage/*",
+			"node_modules/*",
+			"package-lock.json",
+			".npm/*",
+			".pre-commit-cache/*",
+			"./.github/actions/composite-actions/*"
+		]
+	}
+}
