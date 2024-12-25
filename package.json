@@ -8,6 +8,6 @@
 	"license": "ISC",
 	"devDependencies": {
 		"@biomejs/biome": "1.9.3",
-		"dprint": "0.47.6"
+		"dprint": "0.48.0"
 	}
 }
